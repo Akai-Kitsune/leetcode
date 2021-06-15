@@ -13,9 +13,8 @@ class Solution(object):
         for k in range(len(s)):
         	if s[k] in mp:
         		i = max(mp[s[k]], i)
-        	else:
-        		result = max(result, k-i+1)
-        		mp[s[k]] = k + 1
+        	result = max(result, k-i+1)
+        	mp[s[k]] = k + 1
         return result
 
 # Given a string s, find the length of the longest substring without repeating characters.
